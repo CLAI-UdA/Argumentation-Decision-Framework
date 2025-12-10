@@ -5,6 +5,15 @@ The framework models design options as arguments, captures attack and support re
 ## Project status
 This is an ongoing project whose aim is to model software design choices with argumentation frameworks. It is supported by the PNRR project FAIR –- Future AI Research (PE00000013), Spoke 9 -- Green-aware AI, under the NRRP MUR program funded by the NextGenerationEU. 
 
+## Publication
+If you use this framework in your research, please cite the following paper:
+
+Gianluca Amato, Fabio Fioravanti, Maria Chiara Meo, and Francesca Scozzari. 2026.  
+**Bipolar Argumentation for Supporting Decisions in Software Design.**  
+In *The 41st ACM/SIGAPP Symposium on Applied Computing (SAC ’26)*,  
+March 23–27, 2026, Thessaloniki, Greece. ACM, New York, NY, USA, 6 pages.  
+https://doi.org/10.1145/3748522.3779886
+
 ## Authors
   - Gianluca Amato (gianluca.amato@unich.it)
   - Fabio Fioravanti
