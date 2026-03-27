@@ -1,9 +1,11 @@
-%%% This is an attempt to modeling Software Design Choices with
-%%% Bipolar Argumentation Frameworks.
+%%% Bipolar Argumentation for Supporting Decisions in Software Design
+%%%
+%%% This document contains some commented attacks and support relations, together
+%%% with the effect of decommenting them on the set of closed preferential extensions.
 
 baf.
 
-d_prefex.
+c_prefex.
 
 %%%% Contexts
 
@@ -99,7 +101,7 @@ att(use(Library1, Context), use(Library2, Context)) :-
     arg(use(Library2, Context)),
     not Library1 = Library2.
 
-%% A library attacks an unsupported dbms
+%% A library attacks an unsupported dbms and vicecersa
 
 att(use(Lib, dblib(Db)), use(Dbms, dbms(Db))) :-
     dblib(Lib),
@@ -107,7 +109,13 @@ att(use(Lib, dblib(Db)), use(Dbms, dbms(Db))) :-
     dbms(Dbms),
     not dblib_dbms(Lib, Dbms).
 
-%% A library attacks an unsupported pl
+att(use(Dbms, dbms(Db)), use(Lib, dblib(Db))) :-
+    dblib(Lib),
+    db(Db),
+    dbms(Dbms),
+    not dblib_dbms(Lib, Dbms).
+
+%% A library attacks an unsupported pl and viceversa
 
 att(use(Lib, dblib(Db)), use(Lang, pl)) :-
     dblib(Lib),
@@ -115,7 +123,22 @@ att(use(Lib, dblib(Db)), use(Lang, pl)) :-
     language(Lang),
     not dblib_pl(Lib, Lang).
 
-%%%% Configuration of Librarys
+att(use(Lang, pl), use(Lib, dblib(Db))) :-
+    dblib(Lib),
+    db(Db),
+    language(Lang),
+    not dblib_pl(Lib, Lang).
+
+%%% Supports
+
+%% PDO supports PHP since it is only available there
+%% This support immediately creates the indirect attack
+%%    use(mysqli, dblib(_)) -> use(php, pl)
+%% making the use of php incompatible with the use of mysqli.
+
+%% support(use(pdo, dblib(Db)), use(php, pl)) :-  db(Db).
+
+%%%% Configuration of libraries
 
 %%% Arguments
 
@@ -135,6 +158,40 @@ att(configure(Library, Context, Configuration, Value1), configure(Library, Conte
     arg(configure(Library, Context, Configuration, Value2)),
     not Value1 = Value2.
 
+%% Attacks between an implementation and configurations for alternative implementations and vicecersa
+
+att(use(Library1, dblib(Db)), configure(Library2, dblib(Db), C, V)) :-
+    arg(use(Library1, dblib(Db))),
+    arg(configure(Library2, dblib(Db), C, V)),
+    not Library1 = Library2.
+
+att(configure(Library2, dblib(Db), C, V), use(Library1, dblib(Db))) :-
+    arg(use(Library1, dblib(Db))),
+    arg(configure(Library2, dblib(Db), C, V)),
+    not Library1 = Library2.
+
+%% This would be needed to avoid configuring libraries which are not used. However,
+%% due to the supports established later, enabling this attacks creates the indirect attacks:
+%%     configure(pdo, dblib(Db), secure_connection, yes) -> goal(green)
+%%     configure(pdo, dblib(Db), secure_connection, no) -> goal(security)
+%% and this makes goal(green) and goal(security) impossible to obtain in any prefex extension.
+
+%att(configure(Library1, Context, Configuration1, Value1), configure(Library2, Context, Configuration2, Value2)) :-
+%    arg(configure(Library1, Context, Configuration1, Value1)),
+%    arg(configure(Library2, Context, Configuration2, Value2)),
+%    not Library1 = Library2.
+
+%%% Supports
+
+%% Configuring a library supports its use.
+%% This support immediately creates the indirect attack
+%%   conf(pdo, dblib(Db), secure_connection, V) -> use(pdo, dblib(Db))
+%% it impossible to obtain use(pdo, dblib(Db)) in any prefex extension.
+
+%% support(configure(Lib, dblib(Db), C, V), use(Lib, dblib(Db))) :-
+%%    arg(configure(Lib, dblib(Db), C, V)),
+%%    arg(use(Lib, dblib(Db))).
+
 %%%% Goals
 
 %%% Arguments
@@ -142,17 +199,27 @@ att(configure(Library, Context, Configuration, Value1), configure(Library, Conte
 goal(green).
 goal(security).
 goal(open_source).
+goal(privacy).
 
 arg(goal(X)) :- goal(X).
 
-%%% Attacks
+%%% Attacks given by technology
 
 att(use(oracle, dbms(X)), goal(open_source)) :- db(X) .
+att(use(python, pl), goal(green)).
 
-%%% Supports
+%%% Goal-level supports
+
+support(goal(security), goal(privacy)).
+
+%%% Goal-based supports
 
 support(configure(Library, Context, secure_connections, yes), goal(security)) :-
     arg(configure(Library, Context, secure_connections, yes)).
 
 support(configure(Library, Context, secure_connections, no), goal(green)) :-
     arg(configure(Library, Context, secure_connections, no)).
+
+% support(use(php, pl), goal(green)).                %  l'unica configurazione green che rimane non è open_source e usa oracle!!
+% support(use(mysqli, dblib(1)), goal(green)).       %  mysqli sparisce dalle soluzioni con security
+% support(use(pgsql, dblib(1)), goal(open_source)).  %  non ha alcun effetto

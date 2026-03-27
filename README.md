@@ -1,17 +1,16 @@
 # Argumentation-Decision-Framework
-A bipolar argumentation-based framework to support technology selection in software architecture.  
-The framework models design options as arguments, captures attack and support relations, and applies argumentation semantics to derive explainable and rational architectural decisions.
+A bipolar argumentation-based framework to support technology selection in software architecture. The framework models design options as arguments, captures attack and support relations, and applies argumentation semantics to derive explainable and rational architectural decisions.
 
 ## Project status
-This is an ongoing project whose aim is to model software design choices with argumentation frameworks. It is supported by the PNRR project FAIR –- Future AI Research (PE00000013), Spoke 9 -- Green-aware AI, under the NRRP MUR program funded by the NextGenerationEU. 
+This is an ongoing project whose aim is to model software design choices with argumentation frameworks. It is supported by the PNRR project FAIR –- Future AI Research (PE00000013), Spoke 9 -- Green-aware AI, under the NRRP MUR program funded by the NextGenerationEU.
 
 ## Publication
 If you use this framework in your research, please cite the following paper:
 
-Gianluca Amato, Fabio Fioravanti, Maria Chiara Meo, and Francesca Scozzari. 2026.  
-**Bipolar Argumentation for Supporting Decisions in Software Design.**  
-In *The 41st ACM/SIGAPP Symposium on Applied Computing (SAC ’26)*,  
-March 23–27, 2026, Thessaloniki, Greece. ACM, New York, NY, USA, 6 pages.  
+Gianluca Amato, Fabio Fioravanti, Maria Chiara Meo, and Francesca Scozzari. 2026.
+**Bipolar Argumentation for Supporting Decisions in Software Design.**
+In *The 41st ACM/SIGAPP Symposium on Applied Computing (SAC ’26)*,
+March 23–27, 2026, Thessaloniki, Greece. ACM, New York, NY, USA, 6 pages.
 https://doi.org/10.1145/3748522.3779886
 
 ## Authors
@@ -26,14 +25,14 @@ Files with extension `.af` are argumentation frameworks. For some of them, the f
 ## How to run the model
 
 1. Download [DLV](https://www.dlvsystem.it/dlvsite/dlv-download/) (an implementation of disjunctive Datalog with ASP extensions);
-2. Download the file `baf.dl` from the [ASPARTIX for Bipolar AFs](https://www.dbai.tuwien.ac.at/research/argumentation/aspartix/baf.html) page.  
+2. Download the file `baf.dl` from the [ASPARTIX for Bipolar AFs](https://www.dbai.tuwien.ac.at/research/argumentation/aspartix/baf.html) page.
    *Note:* ASPARTIX is not a single software package, but rather a collection of programs for DLV or Clingo (another ASP implementation) that implement the semantics of argumentation frameworks. Different types of frameworks use different programs, and often even different semantics for the same type of framework require separate programs.
 3. Download the file `baf_model.af` (or other similar file) that contains our argumentation framework.
 4. Put everything in the same folder, open a terminal window, and run the command:
-   
+
    ```bash
    dlv baf_model.af baf.dl -filter=in
    ```
-The `.af` files are configured to compute closed preferred extensions. It is possible to change the `c_prefex` line in those files with one of the following to compute under a different semantics:  
+The `.af` files are configured to compute closed preferred extensions. It is possible to change the `c_prefex` line in those files with one of the following to compute under a different semantics:
   - `d_adm`, `s_adm`, `c_adm`: Indicate to the system that you want to compute Dung admissible, stable, or closed extensions.
   - `d_prefex`, `s_prefex`, `c_prefex`: As above, but for preferred extensions.

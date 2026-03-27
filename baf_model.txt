@@ -1,89 +1,53 @@
 DLV [build BEN/Dec 17 2012   gcc 4.6.1]
 
-{in(goal(open_source)), in(use(php,pl)), in(use(mysql,dbms(1))), in(use(mysqli,dblib(1))), in(configure(pdo,dblib(1),secure_connections,yes)), in(configure(mysqli,dblib(1),secure_connections,no))}
+{in(goal(security)), in(goal(privacy)), in(use(java,pl)), in(use(oracle,dbms(1))), in(configure(pdo,dblib(1),secure_connections,yes)), in(configure(mysqli,dblib(1),secure_connections,yes))}
 
-{in(goal(open_source)), in(use(python,pl)), in(use(mysql,dbms(1))), in(use(mysql_any,dblib(1))), in(configure(pdo,dblib(1),secure_connections,yes)), in(configure(mysqli,dblib(1),secure_connections,no))}
+{in(goal(security)), in(goal(privacy)), in(use(php,pl)), in(use(oracle,dbms(1))), in(configure(pdo,dblib(1),secure_connections,yes)), in(configure(mysqli,dblib(1),secure_connections,yes))}
 
-{in(goal(open_source)), in(use(php,pl)), in(use(mysql,dbms(1))), in(use(mysql_any,dblib(1))), in(configure(pdo,dblib(1),secure_connections,yes)), in(configure(mysqli,dblib(1),secure_connections,no))}
+{in(use(python,pl)), in(goal(security)), in(goal(privacy)), in(use(oracle,dbms(1))), in(configure(pdo,dblib(1),secure_connections,yes)), in(configure(mysqli,dblib(1),secure_connections,yes))}
 
-{in(goal(open_source)), in(use(python,pl)), in(use(pgsql,dbms(1))), in(use(pgsql_any,dblib(1))), in(configure(pdo,dblib(1),secure_connections,yes)), in(configure(mysqli,dblib(1),secure_connections,no))}
+{in(goal(open_source)), in(goal(security)), in(goal(privacy)), in(use(java,pl)), in(use(pgsql,dbms(1))), in(configure(pdo,dblib(1),secure_connections,yes)), in(configure(mysqli,dblib(1),secure_connections,yes))}
 
-{in(goal(open_source)), in(use(php,pl)), in(use(pgsql,dbms(1))), in(use(pgsql_any,dblib(1))), in(configure(pdo,dblib(1),secure_connections,yes)), in(configure(mysqli,dblib(1),secure_connections,no))}
+{in(goal(open_source)), in(goal(security)), in(goal(privacy)), in(use(php,pl)), in(use(pgsql,dbms(1))), in(configure(pdo,dblib(1),secure_connections,yes)), in(configure(mysqli,dblib(1),secure_connections,yes))}
 
-{in(use(java,pl)), in(use(oracle,dbms(1))), in(use(jdbc,dblib(1))), in(configure(pdo,dblib(1),secure_connections,yes)), in(configure(mysqli,dblib(1),secure_connections,no))}
+{in(goal(open_source)), in(use(python,pl)), in(goal(security)), in(goal(privacy)), in(use(pgsql,dbms(1))), in(configure(pdo,dblib(1),secure_connections,yes)), in(configure(mysqli,dblib(1),secure_connections,yes))}
 
-{in(goal(open_source)), in(use(java,pl)), in(use(pgsql,dbms(1))), in(use(jdbc,dblib(1))), in(configure(pdo,dblib(1),secure_connections,yes)), in(configure(mysqli,dblib(1),secure_connections,no))}
+{in(goal(open_source)), in(goal(security)), in(goal(privacy)), in(use(java,pl)), in(use(mysql,dbms(1))), in(configure(pdo,dblib(1),secure_connections,yes)), in(configure(mysqli,dblib(1),secure_connections,yes))}
 
-{in(goal(open_source)), in(use(java,pl)), in(use(mysql,dbms(1))), in(use(jdbc,dblib(1))), in(configure(pdo,dblib(1),secure_connections,yes)), in(configure(mysqli,dblib(1),secure_connections,no))}
+{in(goal(open_source)), in(goal(security)), in(goal(privacy)), in(use(php,pl)), in(use(mysql,dbms(1))), in(configure(pdo,dblib(1),secure_connections,yes)), in(configure(mysqli,dblib(1),secure_connections,yes))}
 
-{in(use(php,pl)), in(use(oracle,dbms(1))), in(use(pdo,dblib(1))), in(configure(pdo,dblib(1),secure_connections,yes)), in(configure(mysqli,dblib(1),secure_connections,no))}
+{in(goal(open_source)), in(use(python,pl)), in(goal(security)), in(goal(privacy)), in(use(mysql,dbms(1))), in(configure(pdo,dblib(1),secure_connections,yes)), in(configure(mysqli,dblib(1),secure_connections,yes))}
 
-{in(goal(open_source)), in(use(php,pl)), in(use(pgsql,dbms(1))), in(use(pdo,dblib(1))), in(configure(pdo,dblib(1),secure_connections,yes)), in(configure(mysqli,dblib(1),secure_connections,no))}
+{in(goal(open_source)), in(use(php,pl)), in(use(mysql,dbms(1))), in(use(mysqli,dblib(1)))}
 
-{in(goal(open_source)), in(use(php,pl)), in(use(mysql,dbms(1))), in(use(pdo,dblib(1))), in(configure(pdo,dblib(1),secure_connections,yes)), in(configure(mysqli,dblib(1),secure_connections,no))}
+{in(goal(open_source)), in(use(php,pl)), in(use(pgsql,dbms(1))), in(use(pgsql_any,dblib(1)))}
 
-{in(goal(open_source)), in(goal(green)), in(use(php,pl)), in(use(mysql,dbms(1))), in(use(mysqli,dblib(1))), in(configure(pdo,dblib(1),secure_connections,no)), in(configure(mysqli,dblib(1),secure_connections,no))}
+{in(goal(open_source)), in(use(python,pl)), in(use(pgsql,dbms(1))), in(use(pgsql_any,dblib(1)))}
 
-{in(goal(open_source)), in(goal(green)), in(use(python,pl)), in(use(mysql,dbms(1))), in(use(mysql_any,dblib(1))), in(configure(pdo,dblib(1),secure_connections,no)), in(configure(mysqli,dblib(1),secure_connections,no))}
+{in(goal(open_source)), in(use(php,pl)), in(use(mysql,dbms(1))), in(use(mysql_any,dblib(1)))}
 
-{in(goal(open_source)), in(goal(green)), in(use(php,pl)), in(use(mysql,dbms(1))), in(use(mysql_any,dblib(1))), in(configure(pdo,dblib(1),secure_connections,no)), in(configure(mysqli,dblib(1),secure_connections,no))}
+{in(goal(open_source)), in(use(python,pl)), in(use(mysql,dbms(1))), in(use(mysql_any,dblib(1)))}
 
-{in(goal(open_source)), in(goal(green)), in(use(python,pl)), in(use(pgsql,dbms(1))), in(use(pgsql_any,dblib(1))), in(configure(pdo,dblib(1),secure_connections,no)), in(configure(mysqli,dblib(1),secure_connections,no))}
+{in(use(java,pl)), in(use(oracle,dbms(1))), in(use(jdbc,dblib(1)))}
 
-{in(goal(open_source)), in(goal(green)), in(use(php,pl)), in(use(pgsql,dbms(1))), in(use(pgsql_any,dblib(1))), in(configure(pdo,dblib(1),secure_connections,no)), in(configure(mysqli,dblib(1),secure_connections,no))}
+{in(goal(open_source)), in(use(java,pl)), in(use(pgsql,dbms(1))), in(use(jdbc,dblib(1)))}
 
-{in(goal(green)), in(use(java,pl)), in(use(oracle,dbms(1))), in(use(jdbc,dblib(1))), in(configure(pdo,dblib(1),secure_connections,no)), in(configure(mysqli,dblib(1),secure_connections,no))}
+{in(goal(open_source)), in(use(java,pl)), in(use(mysql,dbms(1))), in(use(jdbc,dblib(1)))}
 
-{in(goal(open_source)), in(goal(green)), in(use(java,pl)), in(use(pgsql,dbms(1))), in(use(jdbc,dblib(1))), in(configure(pdo,dblib(1),secure_connections,no)), in(configure(mysqli,dblib(1),secure_connections,no))}
+{in(use(php,pl)), in(use(oracle,dbms(1))), in(use(pdo,dblib(1)))}
 
-{in(goal(open_source)), in(goal(green)), in(use(java,pl)), in(use(mysql,dbms(1))), in(use(jdbc,dblib(1))), in(configure(pdo,dblib(1),secure_connections,no)), in(configure(mysqli,dblib(1),secure_connections,no))}
+{in(goal(open_source)), in(use(php,pl)), in(use(pgsql,dbms(1))), in(use(pdo,dblib(1)))}
 
-{in(goal(green)), in(use(php,pl)), in(use(oracle,dbms(1))), in(use(pdo,dblib(1))), in(configure(pdo,dblib(1),secure_connections,no)), in(configure(mysqli,dblib(1),secure_connections,no))}
+{in(goal(open_source)), in(use(php,pl)), in(use(mysql,dbms(1))), in(use(pdo,dblib(1)))}
 
-{in(goal(open_source)), in(goal(green)), in(use(php,pl)), in(use(pgsql,dbms(1))), in(use(pdo,dblib(1))), in(configure(pdo,dblib(1),secure_connections,no)), in(configure(mysqli,dblib(1),secure_connections,no))}
+{in(goal(green)), in(use(php,pl)), in(use(oracle,dbms(1))), in(configure(pdo,dblib(1),secure_connections,no)), in(configure(mysqli,dblib(1),secure_connections,no))}
 
-{in(goal(open_source)), in(goal(green)), in(use(php,pl)), in(use(mysql,dbms(1))), in(use(pdo,dblib(1))), in(configure(pdo,dblib(1),secure_connections,no)), in(configure(mysqli,dblib(1),secure_connections,no))}
+{in(goal(green)), in(use(java,pl)), in(use(oracle,dbms(1))), in(configure(pdo,dblib(1),secure_connections,no)), in(configure(mysqli,dblib(1),secure_connections,no))}
 
-{in(goal(open_source)), in(use(php,pl)), in(use(mysql,dbms(1))), in(use(mysqli,dblib(1))), in(configure(pdo,dblib(1),secure_connections,no)), in(configure(mysqli,dblib(1),secure_connections,yes))}
+{in(goal(open_source)), in(goal(green)), in(use(java,pl)), in(use(pgsql,dbms(1))), in(configure(pdo,dblib(1),secure_connections,no)), in(configure(mysqli,dblib(1),secure_connections,no))}
 
-{in(goal(open_source)), in(use(python,pl)), in(use(mysql,dbms(1))), in(use(mysql_any,dblib(1))), in(configure(pdo,dblib(1),secure_connections,no)), in(configure(mysqli,dblib(1),secure_connections,yes))}
+{in(goal(open_source)), in(goal(green)), in(use(java,pl)), in(use(mysql,dbms(1))), in(configure(pdo,dblib(1),secure_connections,no)), in(configure(mysqli,dblib(1),secure_connections,no))}
 
-{in(goal(open_source)), in(use(php,pl)), in(use(mysql,dbms(1))), in(use(mysql_any,dblib(1))), in(configure(pdo,dblib(1),secure_connections,no)), in(configure(mysqli,dblib(1),secure_connections,yes))}
+{in(goal(open_source)), in(goal(green)), in(use(php,pl)), in(use(pgsql,dbms(1))), in(configure(pdo,dblib(1),secure_connections,no)), in(configure(mysqli,dblib(1),secure_connections,no))}
 
-{in(goal(open_source)), in(use(python,pl)), in(use(pgsql,dbms(1))), in(use(pgsql_any,dblib(1))), in(configure(pdo,dblib(1),secure_connections,no)), in(configure(mysqli,dblib(1),secure_connections,yes))}
-
-{in(goal(open_source)), in(use(php,pl)), in(use(pgsql,dbms(1))), in(use(pgsql_any,dblib(1))), in(configure(pdo,dblib(1),secure_connections,no)), in(configure(mysqli,dblib(1),secure_connections,yes))}
-
-{in(use(java,pl)), in(use(oracle,dbms(1))), in(use(jdbc,dblib(1))), in(configure(pdo,dblib(1),secure_connections,no)), in(configure(mysqli,dblib(1),secure_connections,yes))}
-
-{in(goal(open_source)), in(use(java,pl)), in(use(pgsql,dbms(1))), in(use(jdbc,dblib(1))), in(configure(pdo,dblib(1),secure_connections,no)), in(configure(mysqli,dblib(1),secure_connections,yes))}
-
-{in(goal(open_source)), in(use(java,pl)), in(use(mysql,dbms(1))), in(use(jdbc,dblib(1))), in(configure(pdo,dblib(1),secure_connections,no)), in(configure(mysqli,dblib(1),secure_connections,yes))}
-
-{in(use(php,pl)), in(use(oracle,dbms(1))), in(use(pdo,dblib(1))), in(configure(pdo,dblib(1),secure_connections,no)), in(configure(mysqli,dblib(1),secure_connections,yes))}
-
-{in(goal(open_source)), in(use(php,pl)), in(use(pgsql,dbms(1))), in(use(pdo,dblib(1))), in(configure(pdo,dblib(1),secure_connections,no)), in(configure(mysqli,dblib(1),secure_connections,yes))}
-
-{in(goal(open_source)), in(use(php,pl)), in(use(mysql,dbms(1))), in(use(pdo,dblib(1))), in(configure(pdo,dblib(1),secure_connections,no)), in(configure(mysqli,dblib(1),secure_connections,yes))}
-
-{in(goal(open_source)), in(goal(security)), in(use(php,pl)), in(use(mysql,dbms(1))), in(use(mysqli,dblib(1))), in(configure(pdo,dblib(1),secure_connections,yes)), in(configure(mysqli,dblib(1),secure_connections,yes))}
-
-{in(goal(open_source)), in(goal(security)), in(use(python,pl)), in(use(mysql,dbms(1))), in(use(mysql_any,dblib(1))), in(configure(pdo,dblib(1),secure_connections,yes)), in(configure(mysqli,dblib(1),secure_connections,yes))}
-
-{in(goal(open_source)), in(goal(security)), in(use(php,pl)), in(use(mysql,dbms(1))), in(use(mysql_any,dblib(1))), in(configure(pdo,dblib(1),secure_connections,yes)), in(configure(mysqli,dblib(1),secure_connections,yes))}
-
-{in(goal(open_source)), in(goal(security)), in(use(python,pl)), in(use(pgsql,dbms(1))), in(use(pgsql_any,dblib(1))), in(configure(pdo,dblib(1),secure_connections,yes)), in(configure(mysqli,dblib(1),secure_connections,yes))}
-
-{in(goal(open_source)), in(goal(security)), in(use(php,pl)), in(use(pgsql,dbms(1))), in(use(pgsql_any,dblib(1))), in(configure(pdo,dblib(1),secure_connections,yes)), in(configure(mysqli,dblib(1),secure_connections,yes))}
-
-{in(goal(security)), in(use(java,pl)), in(use(oracle,dbms(1))), in(use(jdbc,dblib(1))), in(configure(pdo,dblib(1),secure_connections,yes)), in(configure(mysqli,dblib(1),secure_connections,yes))}
-
-{in(goal(open_source)), in(goal(security)), in(use(java,pl)), in(use(pgsql,dbms(1))), in(use(jdbc,dblib(1))), in(configure(pdo,dblib(1),secure_connections,yes)), in(configure(mysqli,dblib(1),secure_connections,yes))}
-
-{in(goal(open_source)), in(goal(security)), in(use(java,pl)), in(use(mysql,dbms(1))), in(use(jdbc,dblib(1))), in(configure(pdo,dblib(1),secure_connections,yes)), in(configure(mysqli,dblib(1),secure_connections,yes))}
-
-{in(goal(security)), in(use(php,pl)), in(use(oracle,dbms(1))), in(use(pdo,dblib(1))), in(configure(pdo,dblib(1),secure_connections,yes)), in(configure(mysqli,dblib(1),secure_connections,yes))}
-
-{in(goal(open_source)), in(goal(security)), in(use(php,pl)), in(use(pgsql,dbms(1))), in(use(pdo,dblib(1))), in(configure(pdo,dblib(1),secure_connections,yes)), in(configure(mysqli,dblib(1),secure_connections,yes))}
-
-{in(goal(open_source)), in(goal(security)), in(use(php,pl)), in(use(mysql,dbms(1))), in(use(pdo,dblib(1))), in(configure(pdo,dblib(1),secure_connections,yes)), in(configure(mysqli,dblib(1),secure_connections,yes))}
+{in(goal(open_source)), in(goal(green)), in(use(php,pl)), in(use(mysql,dbms(1))), in(configure(pdo,dblib(1),secure_connections,no)), in(configure(mysqli,dblib(1),secure_connections,no))}
